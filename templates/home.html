@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}
+<section class="hero"><span class="eyebrow">ELEIÇÃO ESCOLAR</span><h1>Seu voto<br><em>faz parte.</em></h1><p>Eleição do Grêmio Estudantil. Digite seu código individual para começar.</p></section>
+{% if opened %}<form class="panel" method="post" action="{{url_for('vote')}}"><input type="hidden" name="csrf" value="{{csrf}}"><label for="code">Código de votação</label><input id="code" name="code" placeholder="Digite seu código" autocomplete="off" required maxlength="32"><button>Continuar <span>→</span></button><p class="hint">Cada código permite registrar um único voto.</p></form>{% else %}<div class="panel closed"><h2>Votação encerrada</h2><p>O período de votação terminou.</p></div>{% endif %}
+{% endblock %}
