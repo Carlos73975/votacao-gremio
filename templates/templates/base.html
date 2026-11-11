@@ -1,4 +1,0 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Votação do Grêmio</title><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"></head>
-<body><main class="wrap"><header><div class="mark">GE</div><div><strong>GRÊMIO ESTUDANTIL</strong><small>Sistema de votação</small></div></header>
-{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}{% for category,message in messages %}<div class="notice {{category}}">{{message}}</div>{% endfor %}{% endif %}{% endwith %}
-{% block content %}{% endblock %}<footer>Votação escolar • Sistema demonstrativo</footer></main></body></html>
